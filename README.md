@@ -1,1 +1,1 @@
-#psykisa.github.io/Inf.Cours/
+# psykisa.github.io/Inf.Cours/

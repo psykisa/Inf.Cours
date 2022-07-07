@@ -145,3 +145,32 @@ function chekForm() {
 }
 chekForm();
 
+function popUp() {
+    let cards = document.querySelectorAll(".courses__card");
+    let subitem = document.querySelectorAll(".header__subitem");
+    subitem.forEach((item) => {
+        item.addEventListener("pointerdown", () => {
+            console.log(item.textContent);
+            cards.forEach((card) => {
+                let titleCard = card.querySelector(".courses__card-title");
+                if (item.textContent == titleCard.textContent) {
+                    let popUp = document.createElement('div');
+                    popUp.classList.add("pop-up");
+                    let closeButton = document.createElement('div');
+                    closeButton.classList.add("close-button");
+                    closeButton.textContent = "X";
+                    popUp.prepend(closeButton);
+                    document.body.prepend(popUp);
+                    closeButton.addEventListener("pointerdown", () => {
+                        popUp.remove();
+                    });
+                    let clonecard = card.cloneNode("false");
+                    clonecard.classList.add(".card");
+                    popUp.append(clonecard);
+                    popUp.style.visibility = "visible"
+                }
+            });
+        });
+    });
+}
+popUp();

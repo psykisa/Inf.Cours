@@ -253,6 +253,90 @@ div .button_white {
   color: #484848;
 }
 
+.pop-up {
+  visibility: hidden;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 90vh;
+  top: 5%;
+  left: 26%;
+  background-color: #424139b4;
+  z-index: 15;
+}
+
+@media (max-width: 992.98px) {
+  .pop-up {
+    top: 3%;
+    height: 95vh;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pop-up {
+    left: 5%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .pop-up {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .pop-up {
+    width: 100vw;
+    height: 98vh;
+    left: 0;
+    top: 0;
+    overflow: scroll;
+  }
+}
+
+.close-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35px;
+  height: 35px;
+  top: 15px;
+  right: 20px;
+  border: 2px solid white;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.close-button:hover {
+  border: 2px solid red;
+  color: red;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -453,7 +537,7 @@ div .button_white {
   cursor: pointer;
   width: 12px;
   height: 6px;
-  background-image: url("../img/header/icon arrow.png");
+  background-image: url("../img/header/icon_arrow.png");
   top: 8px;
   left: 60px;
 }
@@ -1379,7 +1463,7 @@ div .button_white {
   position: absolute;
   width: 30px;
   height: 30px;
-  background: url("../img/about/arrow left.png") no-repeat;
+  background: url("../img/about/arrow_left.png") no-repeat;
   background-size: contain;
   top: 70px;
   left: 30px;

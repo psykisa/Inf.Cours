@@ -147,10 +147,11 @@ chekForm();
 
 function popUp() {
     let cards = document.querySelectorAll(".courses__card");
-    let subitem = document.querySelectorAll(".header__subitem");
+    let subitem = document.querySelectorAll(".header__sublink");
     subitem.forEach((item) => {
-        item.addEventListener("pointerdown", () => {
-            console.log(item.textContent);
+        item.addEventListener("pointerdown", (event) => {
+           // event.stopPropagation();
+           console.log("HELLO")
             cards.forEach((card) => {
                 let titleCard = card.querySelector(".courses__card-title");
                 if (item.textContent == titleCard.textContent) {
@@ -167,10 +168,13 @@ function popUp() {
                     let clonecard = card.cloneNode("false");
                     clonecard.classList.add(".card");
                     popUp.append(clonecard);
-                    popUp.style.visibility = "visible"
+                    popUp.style.visibility = "visible";
                 }
             });
-        });
+        },false);
     });
 }
 popUp();
+// document.body.onclick = (e)=>{
+//     console.log(e.target)
+// }

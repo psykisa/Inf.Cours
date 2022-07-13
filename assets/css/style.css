@@ -558,6 +558,7 @@ div .button_white {
   padding: 10px;
   list-style: circle;
   border: 1px #F4D011 solid;
+  z-index: 30;
 }
 
 .header__subitem {

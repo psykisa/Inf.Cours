@@ -150,7 +150,6 @@ function popUp() {
     let subitem = document.querySelectorAll(".header__sublink");
     subitem.forEach((item) => {
         item.addEventListener("pointerdown", (event) => {
-           // event.stopPropagation();
            console.log("HELLO")
             cards.forEach((card) => {
                 let titleCard = card.querySelector(".courses__card-title");
